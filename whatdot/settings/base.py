@@ -114,7 +114,9 @@ THIRD_PARTY_APPS = [
     "django_filters",  # Filter down a queryset based on parameters a user provides.
     "rest_framework",  # Toolkit for building Web APIs.
 ]
-LOCAL_APPS = []  # type: ignore
+LOCAL_APPS = [
+    "apps.users",
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

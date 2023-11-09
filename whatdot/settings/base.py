@@ -34,9 +34,7 @@ DEBUG = env.bool("DEBUG", default=True)
 
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list(
-    "DJANGO_ALLOWED_HOSTS", default=[""]
-)
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=[""])
 CSRF_TRUSTED_ORIGINS = env.list(
     "CSRF_TRUSTED_ORIGINS",
     default=[""],
@@ -116,9 +114,8 @@ THIRD_PARTY_APPS = [
     "django_filters",  # Filter down a queryset based on parameters a user provides.
     "rest_framework",  # Toolkit for building Web APIs.
 ]
-LOCAL_APPS = [
+LOCAL_APPS = []  # type: ignore
 
-]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 
@@ -126,11 +123,9 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # ------------------------------------------------------------------------------
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#authentication-backends
-AUTHENTICATION_BACKENDS = (
-    "django.contrib.auth.backends.ModelBackend",
-)
+AUTHENTICATION_BACKENDS = ("django.contrib.auth.backends.ModelBackend",)
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
-#AUTH_USER_MODEL = "users.User"
+# AUTH_USER_MODEL = "users.User"
 
 
 # PASSWORDS
@@ -258,11 +253,7 @@ REQUEST_LOGGING_ENABLE_COLORIZE = False
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "formatters": {
-        "default": {
-            "format": "%(levelname)s %(asctime)s %(module)s %(message)s"
-        }
-    },
+    "formatters": {"default": {"format": "%(levelname)s %(asctime)s %(module)s %(message)s"}},
     "handlers": {
         "console": {
             "level": "DEBUG",
@@ -289,7 +280,6 @@ LOGGING = {
     },
     "root": {"level": "INFO", "handlers": ["console"]},
 }
-
 
 
 # django-rest-framework

@@ -1,7 +1,4 @@
 # Local settings. To be used by developers on their machines.
-import logging
-
-
 from .base import *  # noqa: F401, F403, pylint: disable=wildcard-import, unused-wildcard-import
 from .base import env
 

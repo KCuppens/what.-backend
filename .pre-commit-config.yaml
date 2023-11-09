@@ -38,7 +38,6 @@ repos:
           - flake8-implicit-str-concat
           - flake8-comprehensions
           - flake8-return
-          - flake8-spellcheck
           # - pep8-naming
           # - flake8-variables-names 
 
@@ -60,6 +59,13 @@ repos:
           - types-python-dateutil
           - types-six
           - types-requests
+          - django-debug-toolbar
+          - django-extensions
+          - django-environ
+          - psycopg2
+          - django-filter
+          - djangorestframework
+          - django-cors-headers
 
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit

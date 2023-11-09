@@ -1,9 +1,6 @@
-.git
-.github
-.vscode
-.coverage
-*.dump
-htmlcov
-*venv*
-.venv
-files
+*.pyc
+*.pyo
+/.env
+/data
+/static_collected
+/node_modules

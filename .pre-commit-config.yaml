@@ -66,6 +66,7 @@ repos:
           - django-filter
           - djangorestframework
           - django-cors-headers
+          - dj-database-url
 
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit

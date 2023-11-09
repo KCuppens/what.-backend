@@ -12,7 +12,7 @@ ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
 
 CSRF_TRUSTED_ORIGINS = env.list(
     "CSRF_TRUSTED_ORIGINS",
-    default=[""],
+    default=["https://what-frontend-212-stage.us.aldryn.io"],
 )
 
 # CACHES

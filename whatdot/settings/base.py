@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 
 import environ
+from corsheaders.defaults import default_headers
 
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
@@ -117,6 +118,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "apps.users",
     "apps.products",
+    "apps.carts",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -314,7 +316,9 @@ CORS_ORIGIN_WHITELIST = env.list(
         "http://127.0.0.1:3000",
     ],
 )
-
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "X-User-Email",
+]
 # APP_DOMAIN is the domain name used by the frontend app connected to this backend.
 # This is used to build email links.
 APP_DOMAIN = env.str("APP_DOMAIN", default="http://localhost:5173/")

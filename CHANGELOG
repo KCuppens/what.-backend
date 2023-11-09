@@ -7,5 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 ### Added
+- Setup project with docker and code formatting (ENG-1)
 ### Changed
 ### Fixed

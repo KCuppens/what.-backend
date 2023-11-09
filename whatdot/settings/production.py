@@ -6,4 +6,4 @@ from .base import env
 # ------------------------------------------------------------------------------
 
 # Be sure to still throw if not defined as before
-env("DJANGO_SECRET_KEY")
+env("SECRET_KEY")

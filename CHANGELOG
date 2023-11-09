@@ -10,5 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Setup project with docker and code formatting (ENG-1)
 - Setup Dummy User and Login to backend without validation API endpoint (ENG-2)
 - Product model, list API and migration to prefill dummy products (ENG-3)
+- Add Search to product API on name and description and alphabetical search (ENG-4)
+
 ### Changed
 ### Fixed

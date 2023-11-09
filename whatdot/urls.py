@@ -26,6 +26,7 @@ from rest_framework.schemas import get_schema_view
 api_patterns = [
     path("users/", include("apps.users.api.v1.urls")),
     path("products/", include("apps.products.api.v1.urls")),
+    path("carts/", include("apps.carts.api.v1.urls")),
 ]
 
 urlpatterns = [

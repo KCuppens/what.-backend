@@ -116,6 +116,7 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     "apps.users",
+    "apps.products",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -309,10 +310,11 @@ CORS_ORIGIN_WHITELIST = env.list(
         # in order to be able to use local FE with dev servers
         "http://localhost:3000",
         "http://localhost:8000",
+        "http://localhost:5173",
         "http://127.0.0.1:3000",
     ],
 )
 
 # APP_DOMAIN is the domain name used by the frontend app connected to this backend.
 # This is used to build email links.
-APP_DOMAIN = env.str("APP_DOMAIN", default="http://localhost:3000/")
+APP_DOMAIN = env.str("APP_DOMAIN", default="http://localhost:5173/")

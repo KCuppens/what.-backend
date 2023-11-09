@@ -47,7 +47,7 @@ DIVIO_DOMAIN_REDIRECTS = [
 ALLOWED_HOSTS = [DIVIO_DOMAIN] + DIVIO_DOMAIN_ALIASES + DIVIO_DOMAIN_REDIRECTS
 CSRF_TRUSTED_ORIGINS = env.list(
     "CSRF_TRUSTED_ORIGINS",
-    default=[""],
+    default=["https://what-frontend-212-stage.us.aldryn.io"],
 )
 
 
@@ -310,7 +310,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = env.list(
     "CORS_ORIGIN_WHITELIST",
     default=[
-        # in order to be able to use local FE with dev servers
+        "https://what-frontend-212-stage.us.aldryn.io",
         "http://localhost:3000",
         "http://localhost:8000",
         "http://localhost:5173",

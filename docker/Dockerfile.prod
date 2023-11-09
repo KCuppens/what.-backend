@@ -21,6 +21,6 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt bullseye-pgdg main" > /etc
 COPY . .
 
 # Statics are build directly in the image and served by whitenoise
-RUN python manage.py collectstatic
-
-CMD python manage.py runserver 0.0.0.0
+RUN python manage.py collectstatic --noinput
+EXPOSE 80
+CMD gunicorn --bind=0.0.0.0:80 --forwarded-allow-ips="*" whatdot.wsgi.application

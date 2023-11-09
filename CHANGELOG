@@ -8,5 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ### Added
 - Setup project with docker and code formatting (ENG-1)
+- Setup Dummy User and Login to backend without validation API endpoint (ENG-2)
 ### Changed
 ### Fixed

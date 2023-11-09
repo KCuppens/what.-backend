@@ -1,11 +1,23 @@
-FROM nginx:latest
+# <WARNING>
+# </WARNING>
 
-# noop for legacy migration
-RUN mkdir /app && \
-    echo "#!/bin/bash" > /app/migrate.sh && \
-    chmod +x /app/migrate.sh
+# <DOCKER_FROM>
+# </DOCKER_FROM>
 
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY html /usr/share/nginx/html
+# <NPM>
+# </NPM>
 
-EXPOSE 80
+# <BOWER>
+# </BOWER>
+
+# <PYTHON>
+# </PYTHON>
+
+# <SOURCE>
+# </SOURCE>
+
+# <GULP>
+# </GULP>
+
+# <STATIC>
+# </STATIC>

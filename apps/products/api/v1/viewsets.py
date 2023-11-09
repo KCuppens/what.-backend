@@ -14,4 +14,4 @@ class ProductListView(ListAPIView):
     permission_classes = [AllowAny]
     filter_backends = [SearchFilter, OrderingFilter]
     search_fields = ["name", "description"]
-    ordering_fields = ["name", "price"]
+    ordering_fields = ["name", "id"]
